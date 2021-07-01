@@ -23,7 +23,7 @@ bot.on("message", (msg)=>
     let identified = false;
     for(const item of idList)
     {
-        if(msg.content.includes(item))
+        if(msg.content.toLowerCase.includes(item.toLowerCase()))
         {
             identified = true;
             break;
@@ -44,5 +44,6 @@ bot.on("message", (msg)=>
             });
         });
     }
-})
+});
+
 bot.login(token);
